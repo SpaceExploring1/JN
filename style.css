@@ -1,0 +1,122 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4a4a4a, #d3d3d3);
+}
+
+/* Logo Container */
+.logo {
+    position: relative;
+    text-align: center;
+}
+
+/* Eyes Animation */
+.eyes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.eye {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 10px;
+    position: relative;
+    animation: blink 2s infinite;
+}
+
+/* Left and Right Eyes */
+.left-eye {
+    animation-delay: 0.5s; /* Slight delay for staggered blinking */
+}
+
+.right-eye {
+    animation-delay: 1s; /* Slight delay for staggered blinking */
+}
+
+/* Eye Blink Animation */
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1); /* Eyes open */
+    }
+    50% {
+        transform: scaleY(0); /* Eyes closed */
+    }
+}
+
+/* Sun and Moon Animation */
+.sun-moon {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Sun */
+.sun {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+    animation: spin 10s linear infinite;
+    transform-origin: center;
+}
+
+/* Moon */
+.moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    left: 100px;
+    animation: spin 10s linear infinite;
+    transform-origin: center;
+}
+
+/* Sun and Moon Spin Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Full rotation */
+    }
+}
+
+a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+.quote {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+.quote p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.quote .author {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
